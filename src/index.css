@@ -1,0 +1,64 @@
+/* FONT IMPORTS */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato/Lato-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --summer-sky: #228EE5;
+    --alice-blue: #EBFAFF;
+    --deep-cerise: #E5228D;
+    --black: #000000;
+    --gray: #808080;
+    --white: #FFFFFF;
+    --dark-green: #030A1B;
+    --alizarin: #E52222;
+    --goldern-fizz: #E5DB22;
+    --spring-green: #00FB71;
+}
+
+:root {
+    --bg-color: var(--alice-blue);
+    --text-color: var(--black);
+}
+
+[data-theme="dark"] {
+    --bg-color: var(--dark-green);
+    --text-color: var(--white);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
