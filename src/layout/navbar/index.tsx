@@ -5,10 +5,13 @@ import { Actions, Links, Logo, NavbarContainer } from "./navbar.styles"
 import { useEffect, useState } from "react"
 
 const Navbar = () => {
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(
+        localStorage.getItem("theme") || "light"
+    );
 
     useEffect(() => {
         document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
     }, [theme]);
 
     const toggleTheme = () => {
@@ -41,7 +44,10 @@ const Navbar = () => {
                 <img src="/icons/heroicons-solid/sun.svg" alt="sun" />
             </button>
             <button onClick={toggleTheme}>
-                <img src="/icons/heroicons-solid/sun.svg" alt="sun" />
+                <img 
+                    src={`/icons/heroicons-solid/${theme === "light" ? "moon" : "sun"}.svg`} 
+                    alt="theme-toggle" 
+                />
             </button>
         </Actions>
     </NavbarContainer>

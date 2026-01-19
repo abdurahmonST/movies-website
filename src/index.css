@@ -44,11 +44,15 @@
 :root {
     --bg-color: var(--alice-blue);
     --text-color: var(--black);
+    --button-bg: var(--summer-sky);
+    --button-color: var(--alice-blue);
 }
 
 [data-theme="dark"] {
     --bg-color: var(--dark-green);
     --text-color: var(--white);
+    --button-bg: var(--spring-green);
+    --button-color: var(--dark-green);
 }
 
 * {
